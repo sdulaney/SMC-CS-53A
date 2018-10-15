@@ -1,10 +1,8 @@
-//
-//  Bank.swift
-//  ShowMVCBank
-//
-//  Created by dehkhoda_abbas on 3/28/18.
-//  Copyright © 2018 Santa Monica College. All rights reserved.
-//
+// Stewart Dulaney
+// 10/14/2018
+// CS 53A Section 4120
+// SID: 1545566
+// Project 2
 
 import Foundation
 
