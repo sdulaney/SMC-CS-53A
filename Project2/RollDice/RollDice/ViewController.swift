@@ -36,6 +36,7 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         
         moneyTextField.text = String(format: "%.2f", bank.getBalance())
+        betTextField.text = String(format: "%.2f", 500.0);
     }
 
 
