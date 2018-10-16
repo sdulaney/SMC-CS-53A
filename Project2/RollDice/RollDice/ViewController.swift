@@ -7,6 +7,26 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    @IBOutlet weak var logoImageView: UIImageView!
+    @IBOutlet weak var msgLabel: UILabel!
+    @IBOutlet weak var moneyLabel: UILabel!
+    @IBOutlet weak var moneyTextField: UITextField!
+    @IBOutlet weak var betLabel: UILabel!
+    @IBOutlet weak var betTextField: UITextField!
+    @IBOutlet weak var dieOneImageView: UIImageView!
+    @IBOutlet weak var dieTwoImageView: UIImageView!
+    
+    
+    
+    @IBAction func rollButtonTapped(_ sender: UIButton) {
+        msgLabel.text = "Hello Dice"
+        dieOneImageView.image = UIImage(named: "Die2")
+        dieTwoImageView.image = UIImage(named: "Die4")
+    }
+    
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
