@@ -18,19 +18,14 @@ class ViewController: UIViewController {
     @IBOutlet weak var dieTwoImageView: UIImageView!
     
     let bank = Bank(amount: 500)
-    
-    
-    
+    let dice = Dice()
     
     @IBAction func rollButtonTapped(_ sender: UIButton) {
-        msgLabel.text = "Hello Dice"
-        dieOneImageView.image = UIImage(named: "Die2")
-        dieTwoImageView.image = UIImage(named: "Die4")
+        dice.throwDice()
+        dieOneImageView.image = UIImage(named: "Die\(dice.getDice1())")
+        dieTwoImageView.image = UIImage(named: "Die\(dice.getDice2())")
     }
     
-    
-    
-
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.

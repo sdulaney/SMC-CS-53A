@@ -69,7 +69,7 @@
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Die1" translatesAutoresizingMaskIntoConstraints="NO" id="2Ro-3V-Tgc">
                                                 <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
                                             </imageView>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Die6" translatesAutoresizingMaskIntoConstraints="NO" id="lhC-5v-4Ku">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Die1" translatesAutoresizingMaskIntoConstraints="NO" id="lhC-5v-4Ku">
                                                 <rect key="frame" x="140" y="0.0" width="100" height="100"/>
                                             </imageView>
                                         </subviews>
@@ -111,7 +111,6 @@
     </scenes>
     <resources>
         <image name="Die1" width="100" height="100"/>
-        <image name="Die6" width="100" height="100"/>
         <image name="logo" width="300" height="212"/>
     </resources>
 </document>
