@@ -22,7 +22,7 @@ class Bank
     
     func withDraw( amt : Double)
     {
-        if( amt < balance )
+        if( amt <= balance )
         {
             balance -= amt
         }
