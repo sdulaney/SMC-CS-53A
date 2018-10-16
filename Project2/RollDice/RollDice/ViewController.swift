@@ -17,6 +17,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var dieOneImageView: UIImageView!
     @IBOutlet weak var dieTwoImageView: UIImageView!
     
+    let bank = Bank(amount: 500)
+    
+    
     
     
     @IBAction func rollButtonTapped(_ sender: UIButton) {
@@ -31,6 +34,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        moneyTextField.text = String(format: "%.2f", bank.getBalance())
     }
 
 
