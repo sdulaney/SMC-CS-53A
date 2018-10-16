@@ -16,14 +16,37 @@ class ViewController: UIViewController {
     @IBOutlet weak var betTextField: UITextField!
     @IBOutlet weak var dieOneImageView: UIImageView!
     @IBOutlet weak var dieTwoImageView: UIImageView!
+    @IBOutlet weak var rollNowBtn: UIButton!
+    
+    
     
     let bank = Bank(amount: 500)
     let dice = Dice()
     
     @IBAction func rollButtonTapped(_ sender: UIButton) {
         dice.throwDice()
-        dieOneImageView.image = UIImage(named: "Die\(dice.getDice1())")
-        dieTwoImageView.image = UIImage(named: "Die\(dice.getDice2())")
+        let die1: Int = dice.getDice1()
+        let die2: Int = dice.getDice2()
+        dieOneImageView.image = UIImage(named: "Die\(die1)")
+        dieTwoImageView.image = UIImage(named: "Die\(die2)")
+        
+        let bet: Double = Double(betTextField.text!)!
+        // If the sum of the dice is 7 or 11
+        if (((die1 + die2) == 7) || ((die1 + die2) == 11)) {
+            // Deposit 3 times the bet amount
+            bank.deposit(amt: 3 * bet)
+            msgLabel.text = "You won $\(String(format: "%.2f", 3 * bet))!"
+        }
+        else {
+            // Withdraw the bet amount
+            bank.withDraw(amt: bet)
+            msgLabel.text = "You lost $\(String(format: "%.2f", bet))!"
+        }
+        moneyTextField.text = String(format: "%.2f", bank.getBalance())
+        if (bank.getBalance() == 0.0) {
+            msgLabel.text = "Game over!"
+            rollNowBtn.isEnabled = false
+        }
     }
     
     override func viewDidLoad() {

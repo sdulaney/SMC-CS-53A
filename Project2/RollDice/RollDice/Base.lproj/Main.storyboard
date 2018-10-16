@@ -102,6 +102,7 @@
                         <outlet property="moneyLabel" destination="x2z-Zw-PyU" id="Kwb-mb-QUs"/>
                         <outlet property="moneyTextField" destination="xL6-36-w11" id="M59-B8-J5s"/>
                         <outlet property="msgLabel" destination="XQX-UG-hb8" id="qpj-j0-dH1"/>
+                        <outlet property="rollNowBtn" destination="SMr-Tw-pyP" id="IC3-aG-trr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
