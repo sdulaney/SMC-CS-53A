@@ -31,16 +31,17 @@ class ViewController: UIViewController {
         dieTwoImageView.image = UIImage(named: "Die\(die2)")
         
         let bet: Double = Double(betTextField.text!)!
+        let sum: Int = die1 + die2
         // If the sum of the dice is 7 or 11
-        if (((die1 + die2) == 7) || ((die1 + die2) == 11)) {
+        if ((sum == 7) || (sum == 11)) {
             // Deposit 3 times the bet amount
             bank.deposit(amt: 3 * bet)
-            msgLabel.text = "You won $\(String(format: "%.2f", 3 * bet))!"
+            msgLabel.text = "You rolled \(sum)! You won $\(String(format: "%.2f", 3 * bet))!"
         }
         else {
             // Withdraw the bet amount
             bank.withDraw(amt: bet)
-            msgLabel.text = "You lost $\(String(format: "%.2f", bet))!"
+            msgLabel.text = "You rolled \(sum)! You lost $\(String(format: "%.2f", bet))!"
         }
         moneyTextField.text = String(format: "%.2f", bank.getBalance())
         if (bank.getBalance() == 0.0) {
