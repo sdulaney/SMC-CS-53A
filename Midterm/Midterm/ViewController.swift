@@ -8,7 +8,15 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    
+    @IBOutlet weak var displayTextField: UITextField!
+    
+    
+    
+    
     var e1 = Emoji(emoji: "😎📱🏀🏈🐻🐶", count: 6)
+    
+    var bank = Bank(amount: 0)
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,6 +57,8 @@ class ViewController: UIViewController {
         print("\nTest deleteBack:")
         e1.deleteBack()
         print(e1.description())
+        
+        displayTextField.text = String(format: "%.2f", bank.getBalance())
     }
 
 

@@ -8,7 +8,7 @@ import Foundation
 
 class Bank
 {
-    var balance = 1000.0
+    var balance = 0.0
     
     init(amount amt : Double)
     {
