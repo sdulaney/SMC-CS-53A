@@ -29,6 +29,10 @@ class ViewController: UIViewController {
         
         print("\nTest appendChar:")
         print(e1.appendChar(em: "ABCD"))
+        
+        print("\nTest countChar:")
+        e1.setEmoji(str: "🤠👻💩👾💀👽👍👾👾🤯👾👊🏻")
+        print(e1.countChar(ch: "👾"))
     }
 
 
