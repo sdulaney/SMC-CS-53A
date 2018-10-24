@@ -8,17 +8,16 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    
     @IBOutlet weak var displayTextField: UITextField!
-    
-    
-    
+    @IBOutlet weak var displayLabel: UILabel!
+    @IBOutlet weak var goButton: UIButton!
+    @IBOutlet weak var resultLabel: UILabel!
+    @IBOutlet weak var changeLabel: UILabel!
     
     var e1 = Emoji(emoji: "😎📱🏀🏈🐻🐶", count: 6)
     
     var bank = Bank(amount: 0)
     var isTyping: Bool = false
-    
     
     @IBAction func insertOneDollar(_ sender: UIButton) {
         bank.deposit(amt: 1.0)
@@ -157,6 +156,31 @@ class ViewController: UIViewController {
         }
     }
     
+    @IBAction func goButton(_ sender: UIButton) {
+        let userInput = displayTextField.text
+        if (userInput == "A" && (bank.getBalance() >= 1.20)) {
+            bank.withDraw(amt: 1.20)
+            displayTextField.text = String(format: "%.2f", bank.getBalance())
+            displayLabel.text = "CHANGE:"
+            resultLabel.text = "Now dispensing Water"
+            displayChange()
+        }
+        else if (userInput == "B" && (bank.getBalance() >= 1.35)) {
+            bank.withDraw(amt: 1.35)
+            displayTextField.text = String(format: "%.2f", bank.getBalance())
+            displayLabel.text = "CHANGE:"
+            resultLabel.text = "Now dispensing Chips"
+            displayChange()
+        }
+        else if (userInput == "C" && (bank.getBalance() >= 1.75)) {
+            bank.withDraw(amt: 1.75)
+            displayTextField.text = String(format: "%.2f", bank.getBalance())
+            displayLabel.text = "CHANGE:"
+            resultLabel.text = "Now dispensing Coke"
+            displayChange()
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -200,6 +224,13 @@ class ViewController: UIViewController {
         displayTextField.text = String(format: "%.2f", bank.getBalance())
     }
 
+    func displayChange() {
+        let balanceInCents: Int = Int((bank.getBalance() * 100).rounded(.up))
+        let numQuarters = balanceInCents / 25
+        let numDimes = (balanceInCents % 25) / 10
+        let numNickels = ((balanceInCents % 25) % 10) / 5
+        changeLabel.text = "Your change is \(numQuarters) quarter(s), \(numDimes) dime(s), and \(numNickels) nickel(s)"
+    }
 
 }
 
