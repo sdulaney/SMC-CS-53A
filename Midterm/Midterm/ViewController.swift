@@ -45,6 +45,10 @@ class ViewController: UIViewController {
         print("\nTest delete:")
         e1.delete()
         print(e1.description())
+        
+        print("\nTest deleteBack:")
+        e1.deleteBack()
+        print(e1.description())
     }
 
 
