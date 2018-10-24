@@ -5,3 +5,17 @@
 // Midterm
 
 import Foundation
+
+class Emoji {
+    var emoji: String = ""
+    var count = 0
+    
+    init (emoji e: String, count c: Int) {
+        emoji = e
+        count = c
+    }
+    
+    func description() -> String {
+        return "emoji: \(self.emoji) \ncount: \(self.count)"
+    }
+}
