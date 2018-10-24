@@ -7,10 +7,14 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    var e1 = Emoji(emoji: "😎📱🏀🏈🐻🐶", count: 6)
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        print(e1.description())
     }
 
 
