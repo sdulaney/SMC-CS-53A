@@ -15,6 +15,10 @@ class Emoji {
         count = c
     }
     
+    func getEmoji() -> String {
+        return self.emoji
+    }
+    
     func description() -> String {
         return "emoji: \(self.emoji) \ncount: \(self.count)"
     }
