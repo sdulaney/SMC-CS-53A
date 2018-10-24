@@ -14,11 +14,19 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
+        print("Test init:")
         print(e1.description())
+        
+        print("\nTest getEmoji:")
         print(e1.getEmoji())
+        
+        print("\nTest setEmoji:")
         e1.setEmoji(str: "🤠👻💩👾💀👽👍🤯👊🏻")
         print(e1.description())
+        
+        print("\nTest getCount:")
         print(e1.getCount())
+        
     }
 
 
