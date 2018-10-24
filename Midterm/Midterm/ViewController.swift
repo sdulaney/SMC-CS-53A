@@ -17,6 +17,7 @@ class ViewController: UIViewController {
     var e1 = Emoji(emoji: "😎📱🏀🏈🐻🐶", count: 6)
     
     var bank = Bank(amount: 0)
+    var isTyping: Bool = false
     
     
     @IBAction func insertOneDollar(_ sender: UIButton) {
@@ -39,13 +40,123 @@ class ViewController: UIViewController {
         displayTextField.text = String(format: "%.2f", bank.getBalance())
     }
     
+    @IBAction func typeLetterA(_ sender: UIButton) {
+        if (isTyping) {
+            displayTextField.text! = displayTextField.text! + "A"
+        }
+        else {
+            displayTextField.text = "A"
+            isTyping = true
+        }
+    }
     
+    @IBAction func typeLetterB(_ sender: UIButton) {
+        if (isTyping) {
+            displayTextField.text! = displayTextField.text! + "B"
+        }
+        else {
+            displayTextField.text = "B"
+            isTyping = true
+        }
+    }
     
+    @IBAction func typeLetterC(_ sender: UIButton) {
+        if (isTyping) {
+            displayTextField.text! = displayTextField.text! + "C"
+        }
+        else {
+            displayTextField.text = "C"
+            isTyping = true
+        }
+    }
     
+    @IBAction func typeLetterD(_ sender: UIButton) {
+        if (isTyping) {
+            displayTextField.text! = displayTextField.text! + "D"
+        }
+        else {
+            displayTextField.text = "D"
+            isTyping = true
+        }
+    }
     
+    @IBAction func typeLetterE(_ sender: UIButton) {
+        if (isTyping) {
+            displayTextField.text! = displayTextField.text! + "E"
+        }
+        else {
+            displayTextField.text = "E"
+            isTyping = true
+        }
+    }
     
+    @IBAction func typeLetterF(_ sender: UIButton) {
+        if (isTyping) {
+            displayTextField.text! = displayTextField.text! + "F"
+        }
+        else {
+            displayTextField.text = "F"
+            isTyping = true
+        }
+    }
     
-
+    @IBAction func typeLetterG(_ sender: UIButton) {
+        if (isTyping) {
+            displayTextField.text! = displayTextField.text! + "G"
+        }
+        else {
+            displayTextField.text = "G"
+            isTyping = true
+        }
+    }
+    
+    @IBAction func typeLetterH(_ sender: UIButton) {
+        if (isTyping) {
+            displayTextField.text! = displayTextField.text! + "H"
+        }
+        else {
+            displayTextField.text = "H"
+            isTyping = true
+        }
+    }
+    
+    @IBAction func typeLetterI(_ sender: UIButton) {
+        if (isTyping) {
+            displayTextField.text! = displayTextField.text! + "I"
+        }
+        else {
+            displayTextField.text = "I"
+            isTyping = true
+        }
+    }
+    
+    @IBAction func typeLetterJ(_ sender: UIButton) {
+        if (isTyping) {
+            displayTextField.text! = displayTextField.text! + "J"
+        }
+        else {
+            displayTextField.text = "J"
+            isTyping = true
+        }
+    }
+    
+    @IBAction func typeLetterK(_ sender: UIButton) {
+        if (isTyping) {
+            displayTextField.text! = displayTextField.text! + "K"
+        }
+        else {
+            displayTextField.text = "K"
+            isTyping = true
+        }
+    }
+    
+    @IBAction func typeBackspace(_ sender: UIButton) {
+        if (isTyping) {
+            let index = displayTextField.text!.index(before: displayTextField.text!.endIndex)
+            displayTextField.text = String(displayTextField.text![displayTextField.text!.startIndex..<index])
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
