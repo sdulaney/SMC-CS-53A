@@ -37,6 +37,10 @@ class ViewController: UIViewController {
         print("\nTest insert:")
         e1.insert(ch: "📞")
         print(e1.description())
+        
+        print("\nTest insertBack:")
+        e1.insertBack(ch: "📞")
+        print(e1.description())
     }
 
 
