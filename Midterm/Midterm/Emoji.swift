@@ -51,6 +51,12 @@ class Emoji {
         return count
     }
     
+    // Inserts the character ch at the at the beginning of the property emoji and increments the property count.
+    func insert(ch: Character) {
+        emoji = String(ch) + emoji
+        count += 1
+    }
+    
     func description() -> String {
         return "emoji: \(self.emoji) \ncount: \(self.count)"
     }
