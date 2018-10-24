@@ -16,6 +16,8 @@ class ViewController: UIViewController {
         
         print(e1.description())
         print(e1.getEmoji())
+        e1.setEmoji(str: "🤠👻💩👾💀👽👍🤯👊🏻")
+        print(e1.description())
     }
 
 
