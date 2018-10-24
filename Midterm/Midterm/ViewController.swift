@@ -27,6 +27,8 @@ class ViewController: UIViewController {
         print("\nTest getCount:")
         print(e1.getCount())
         
+        print("\nTest appendChar:")
+        print(e1.appendChar(em: "ABCD"))
     }
 
 
