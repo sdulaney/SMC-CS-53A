@@ -70,6 +70,13 @@ class Emoji {
         count -= 1
     }
     
+    // Deletes the character at the end of the property emoji and decrements the property count.
+    func deleteBack() {
+        let index = emoji.index(before: emoji.endIndex)
+        emoji = String(emoji[emoji.startIndex..<index])
+        count -= 1
+    }
+    
     func description() -> String {
         return "emoji: \(self.emoji) \ncount: \(self.count)"
     }
