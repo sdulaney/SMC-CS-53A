@@ -193,6 +193,9 @@
                                 <state key="normal" title="Insert $1">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="insertOneDollar:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yDH-su-0xu"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oHJ-Lf-sFd">
                                 <rect key="frame" x="199" y="544" width="71" height="30"/>
@@ -201,6 +204,9 @@
                                 <state key="normal" title="Insert 25¢">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="insert25Cents:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hx7-MX-dlE"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7hO-td-4zb">
                                 <rect key="frame" x="98" y="594" width="69" height="30"/>
@@ -209,6 +215,9 @@
                                 <state key="normal" title="Insert 10¢">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="insert10Cents:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gG0-do-yo2"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ndT-w5-sDs">
                                 <rect key="frame" x="204" y="594" width="62" height="30"/>
@@ -217,6 +226,9 @@
                                 <state key="normal" title="Insert 5¢">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="insert5Cents:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hns-Nf-0ZJ"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

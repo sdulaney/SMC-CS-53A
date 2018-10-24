@@ -17,6 +17,34 @@ class ViewController: UIViewController {
     var e1 = Emoji(emoji: "😎📱🏀🏈🐻🐶", count: 6)
     
     var bank = Bank(amount: 0)
+    
+    
+    @IBAction func insertOneDollar(_ sender: UIButton) {
+        bank.deposit(amt: 1.0)
+        displayTextField.text = String(format: "%.2f", bank.getBalance())
+    }
+    
+    @IBAction func insert25Cents(_ sender: UIButton) {
+        bank.deposit(amt: 0.25)
+        displayTextField.text = String(format: "%.2f", bank.getBalance())
+    }
+    
+    @IBAction func insert10Cents(_ sender: UIButton) {
+        bank.deposit(amt: 0.10)
+        displayTextField.text = String(format: "%.2f", bank.getBalance())
+    }
+    
+    @IBAction func insert5Cents(_ sender: UIButton) {
+        bank.deposit(amt: 0.05)
+        displayTextField.text = String(format: "%.2f", bank.getBalance())
+    }
+    
+    
+    
+    
+    
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
