@@ -51,16 +51,23 @@ class Emoji {
         return count
     }
     
-    // Inserts the character ch at the at the beginning of the property emoji and increments the property count.
+    // Inserts the character ch at the beginning of the property emoji and increments the property count.
     func insert(ch: Character) {
         emoji = String(ch) + emoji
         count += 1
     }
     
-    // Inserts the character ch at the at the end of the property emoji and increments the property count.
+    // Inserts the character ch at the end of the property emoji and increments the property count.
     func insertBack(ch: Character) {
         emoji = emoji + String(ch)
         count += 1
+    }
+    
+    // Deletes the character at the beginning of the property emoji and decrements the property count.
+    func delete() {
+        let index = emoji.index(after: emoji.startIndex)
+        emoji = String(emoji[index..<emoji.endIndex])
+        count -= 1
     }
     
     func description() -> String {
