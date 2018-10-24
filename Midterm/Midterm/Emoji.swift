@@ -40,6 +40,16 @@ class Emoji {
         return result
     }
     
+    // Returns the number of times the character ch occurs in the property emoji.
+    func countChar(ch: Character) -> Int {
+        var count: Int = 0
+        for char in self.emoji {
+            if (char == ch) {
+                count += 1
+            }
+        }
+        return count
+    }
     
     func description() -> String {
         return "emoji: \(self.emoji) \ncount: \(self.count)"
