@@ -28,6 +28,19 @@ class Emoji {
         return self.count
     }
     
+    func appendChar(em: String) -> String {
+        // your code should take first emoji from em and
+        // append at end of it
+        // Example let say em = “ABCD”
+        // appendChar should return BCDA
+        let firstChar = em[em.startIndex]
+        let index = em.index(after: em.startIndex)
+        var result = String(em[index..<em.endIndex])
+        result.append(firstChar)
+        return result
+    }
+    
+    
     func description() -> String {
         return "emoji: \(self.emoji) \ncount: \(self.count)"
     }
