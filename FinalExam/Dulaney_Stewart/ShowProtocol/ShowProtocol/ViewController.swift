@@ -33,5 +33,5 @@ class ViewController: UIViewController {
 }
 
 func printCostEstimate(a: Appraisable) {
-    print("Cost Estimate: \(a.estimate())")
+    print("Cost Estimate: $\(String(format: "%.2f", a.estimate()))")
 }
