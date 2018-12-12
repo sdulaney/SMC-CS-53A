@@ -18,3 +18,6 @@ class ViewController: UIViewController {
 
 }
 
+func printCostEstimate(a: Appraisable) {
+    print("Cost Estimate: \(a.estimate())\n")
+}
