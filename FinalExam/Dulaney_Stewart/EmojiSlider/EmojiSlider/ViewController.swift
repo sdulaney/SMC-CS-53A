@@ -13,7 +13,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var emojiLabel: UILabel!
     
     @IBAction func sliderMoved(_ sender: UISlider) {
-        
+        emojiLabel.font = UIFont.systemFont(ofSize: CGFloat(sender.value * 200.0))
     }
     
     override func viewDidLoad() {
