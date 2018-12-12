@@ -12,6 +12,10 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var emojiLabel: UILabel!
     
+    @IBAction func sliderMoved(_ sender: UISlider) {
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
